@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Classifier (TensorFlow.js + MobileNet)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Load TFJS and the MobileNet model from CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Image Classifier</h1>
+    <p>Runs 100% in your browser. No uploads. Powered by TensorFlow.js MobileNet.</p>
+  </header>
+
+  <main>
+    <div id="dropzone" class="card">
+      <p><strong>Drop an image here</strong> or click to choose one.</p>
+      <input id="file" type="file" accept="image/*" />
+    </div>
+
+    <div id="previewWrap" class="card" hidden>
+      <h2>Preview</h2>
+      <img id="preview" alt="Selected image preview" crossorigin="anonymous" />
+    </div>
+
+    <div id="status" class="status">Loading model…</div>
+
+    <div id="results" class="card" hidden>
+      <h2>Predictions</h2>
+      <table>
+        <thead><tr><th>Label</th><th>Confidence</th></tr></thead>
+        <tbody id="predBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="https://www.tensorflow.org/js" target="_blank" rel="noopener">TensorFlow.js</a> • MobileNet pre-trained model</p>
+  </footer>
+</body>
+</html>
