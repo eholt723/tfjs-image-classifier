@@ -9,7 +9,6 @@ const predBody = document.getElementById("predBody");
 
 async function initModel() {
   try {
-    
     model = await mobilenet.load(); 
     statusEl.textContent = "Model ready. Choose or drop an image.";
   } catch (err) {
