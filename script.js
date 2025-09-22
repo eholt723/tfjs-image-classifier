@@ -9,8 +9,8 @@ const predBody = document.getElementById("predBody");
 
 async function initModel() {
   try {
-    // Loads MobileNet v2 via @tensorflow-models/mobilenet
-    model = await mobilenet.load(); // default is fine for demo
+    
+    model = await mobilenet.load(); 
     statusEl.textContent = "Model ready. Choose or drop an image.";
   } catch (err) {
     console.error(err);
@@ -28,7 +28,7 @@ async function classify(imgEl) {
   predBody.innerHTML = "";
   resultsCard.hidden = true;
 
-  const preds = await model.classify(imgEl, 5); // up to 5 top predictions
+  const preds = await model.classify(imgEl, 5); 
   preds.forEach(p => {
     const tr = document.createElement("tr");
     const tdLabel = document.createElement("td");
@@ -81,7 +81,7 @@ fileInput.addEventListener("change", (e) => {
   })
 );
 
-// Clicking the card opens the file picker
+
 dropzone.addEventListener("click", () => fileInput.click());
 
 // Kick things off
