@@ -4,10 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Image Classifier-Eric Holt</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="glow_round_favicon.png?v=1">
+  <link rel="shortcut icon" href="glow_round_favicon.png?v=1">
+
   <link rel="stylesheet" href="styles.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest"></script>
   <script defer src="script.js"></script>
+
+  <style>
+    .credit {
+      position: fixed;
+      bottom: 12px;
+      right: 16px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -38,7 +53,13 @@
   </main>
 
   <footer>
-    <p><a href="https://www.tensorflow.org/js" target="_blank" rel="noopener">TensorFlow.js</a> • MobileNet pre-trained model</p>
+    <p>
+      <a href="https://www.tensorflow.org/js" target="_blank" rel="noopener">
+        TensorFlow.js
+      </a> • MobileNet pre-trained model
+    </p>
   </footer>
+
+  <div class="credit">Created by Eric Holt</div>
 </body>
 </html>
